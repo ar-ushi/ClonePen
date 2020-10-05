@@ -10,7 +10,13 @@ body{
   height: 50vh;
   display: flex;
 }
-
+.exp-coll-btn{
+  margin-left: .5em;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
 .e-container{
   flex-grow: 1;  /*flex - grow makes them grow so this essential fills all the space */
   flex-basis:0;  /*flex - basis means they are all the same size*/
@@ -18,6 +24,13 @@ body{
   flex-direction: column;
   padding: 0.5em;
   background-color: hsl(225,6%,25%);
+}
+.e-container.collapsed{
+  flex-grow: 0; /* ? wont grow at all*/
+}
+.e-container.collapsed .CodeMirror-scroll{
+  position: absolute;
+  overflow: hidden !important;
 }
 
 .e-title{
